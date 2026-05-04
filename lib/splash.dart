@@ -67,7 +67,7 @@ class _SplashScreenState extends State<SplashScreen>
     try {
       await _ctrl.forward().orCancel;
       // Keep the splash screen fully visible for exactly 1 more second (3s total)
-      await Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 3));
 
       if (mounted) {
         // Reset System UI for the next screens if needed here, or let the next screen handle it
@@ -225,8 +225,31 @@ class WavesPainter extends CustomPainter {
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
-class BottomKnob extends StatelessWidget {
+class BottomKnob extends StatefulWidget {
   const BottomKnob({super.key});
+
+  @override
+  State<BottomKnob> createState() => _BottomKnobState();
+}
+
+class _BottomKnobState extends State<BottomKnob> with SingleTickerProviderStateMixin {
+  late AnimationController _rotationController;
+
+  @override
+  void initState() {
+    super.initState();
+    // Setting up the controller to spin continuously
+    _rotationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 4), // Time for one full 360-degree rotation
+    )..repeat(); // .repeat() makes it loop infinitely
+  }
+
+  @override
+  void dispose() {
+    _rotationController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -236,17 +259,9 @@ class BottomKnob extends StatelessWidget {
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          // Rotating Dial (Silver Ring + Inner Circles + Bolts)
-          TweenAnimationBuilder<double>(
-            tween: Tween<double>(begin: 0, end: 1),
-            duration: const Duration(seconds: 4),
-            curve: Curves.easeOutQuart, // Decelerating smooth curve
-            builder: (context, value, child) {
-              return Transform.rotate(
-                angle: value * 2 * pi, // Full 360 degree rotation
-                child: child,
-              );
-            },
+          // RotationTransition is highly optimized for continuous rotations
+          RotationTransition(
+            turns: _rotationController,
             child: SizedBox(
               width: 140,
               height: 140,
@@ -272,7 +287,7 @@ class BottomKnob extends StatelessWidget {
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.3), // Softened shadow
+                          color: Colors.black.withOpacity(0.3),
                           blurRadius: 24,
                           offset: const Offset(0, 12),
                         ),
@@ -371,7 +386,6 @@ class BottomKnob extends StatelessWidget {
     return bolts;
   }
 }
-
 class MarblePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
