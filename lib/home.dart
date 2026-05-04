@@ -37,12 +37,12 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(32),
                   decoration: BoxDecoration(
                     color: isDark
-                        ? Colors.white.withOpacity(0.05)
-                        : theme.colorScheme.primary.withOpacity(0.08),
+                        ? Colors.white.withValues(alpha: 0.05)
+                        : theme.colorScheme.primary.withValues(alpha: 0.08),
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
-                        color: theme.colorScheme.primary.withOpacity(isDark ? 0.2 : 0.1),
+                        color: theme.colorScheme.primary.withValues(alpha: isDark ? 0.2 : 0.1),
                         blurRadius: 32,
                         offset: const Offset(0, 12),
                       ),

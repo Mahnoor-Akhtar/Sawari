@@ -86,7 +86,6 @@ class _PassengerOrdersTabState extends State<PassengerOrdersTab> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
@@ -154,7 +153,7 @@ class _PassengerOrdersTabState extends State<PassengerOrdersTab> {
           Container(
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
-              color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9),
+              color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9),
               shape: BoxShape.circle,
             ),
             child: Icon(
@@ -194,10 +193,10 @@ class _PassengerOrdersTabState extends State<PassengerOrdersTab> {
     return Padding(
       padding: const EdgeInsets.only(right: 12),
       child: Material(
-        color: isSelected ? theme.colorScheme.primary : (isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9)),
+        color: isSelected ? theme.colorScheme.primary : (isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9)),
         borderRadius: BorderRadius.circular(24),
         elevation: isSelected ? 2 : 0,
-        shadowColor: theme.colorScheme.primary.withOpacity(0.4),
+        shadowColor: theme.colorScheme.primary.withValues(alpha: 0.4),
         child: InkWell(
           borderRadius: BorderRadius.circular(24),
           onTap: () => setState(() => _selectedFilter = label),
@@ -229,14 +228,14 @@ class _PassengerOrdersTabState extends State<PassengerOrdersTab> {
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.3 : 0.04),
+            color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.04),
             blurRadius: 20,
             offset: const Offset(0, 8),
           ),
         ],
       ),
       child: Material(
-        color: isDark ? Colors.white.withOpacity(0.05) : Colors.white,
+        color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.white,
         borderRadius: BorderRadius.circular(24),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
@@ -257,7 +256,7 @@ class _PassengerOrdersTabState extends State<PassengerOrdersTab> {
                         Container(
                           padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: theme.colorScheme.primary.withOpacity(0.1),
+                            color: theme.colorScheme.primary.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Icon(order['vehicleIcon'] as IconData, size: 20, color: theme.colorScheme.primary),
@@ -282,9 +281,9 @@ class _PassengerOrdersTabState extends State<PassengerOrdersTab> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
-                        color: isDark ? statusColor.withOpacity(0.15) : statusColor.withOpacity(0.1),
+                        color: isDark ? statusColor.withValues(alpha: 0.15) : statusColor.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: statusColor.withOpacity(0.3)),
+                        border: Border.all(color: statusColor.withValues(alpha: 0.3)),
                       ),
                       child: Text(
                         order['status'] as String,
@@ -295,7 +294,7 @@ class _PassengerOrdersTabState extends State<PassengerOrdersTab> {
                 ),
               ),
 
-              Divider(height: 1, thickness: 1, color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9)),
+              Divider(height: 1, thickness: 1, color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9)),
 
               // Route info
               Padding(
@@ -311,7 +310,7 @@ class _PassengerOrdersTabState extends State<PassengerOrdersTab> {
                             width: 2,
                             height: 32,
                             margin: const EdgeInsets.symmetric(vertical: 4),
-                            color: isDark ? Colors.white.withOpacity(0.1) : const Color(0xFFE2E8F0)
+                            color: isDark ? Colors.white.withValues(alpha: 0.1) : const Color(0xFFE2E8F0)
                         ),
                         const Icon(Icons.location_on, size: 18, color: Color(0xFFD4AF37)),
                       ],
@@ -350,14 +349,14 @@ class _PassengerOrdersTabState extends State<PassengerOrdersTab> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
                 decoration: BoxDecoration(
-                  color: isDark ? Colors.black.withOpacity(0.2) : const Color(0xFFF8FAFC),
+                  color: isDark ? Colors.black.withValues(alpha: 0.2) : const Color(0xFFF8FAFC),
                 ),
                 child: Row(
                   children: [
                     Container(
                       padding: const EdgeInsets.all(6),
                       decoration: BoxDecoration(
-                        color: isDark ? Colors.white.withOpacity(0.1) : Colors.white,
+                        color: isDark ? Colors.white.withValues(alpha: 0.1) : Colors.white,
                         shape: BoxShape.circle,
                         border: Border.all(color: isDark ? Colors.transparent : const Color(0xFFE2E8F0)),
                       ),

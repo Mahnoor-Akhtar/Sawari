@@ -67,7 +67,7 @@ class _PassengerSignUpScreenState extends State<PassengerSignUpScreen> {
                   child: Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: isDark ? Colors.white.withOpacity(0.05) : theme.colorScheme.primary.withOpacity(0.05),
+                      color: isDark ? Colors.white.withValues(alpha: 0.05) : theme.colorScheme.primary.withValues(alpha: 0.05),
                       shape: BoxShape.circle,
                     ),
                     child: Image.asset(
@@ -238,7 +238,7 @@ class _PassengerSignUpScreenState extends State<PassengerSignUpScreen> {
         style: TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w700,
-          color: theme.colorScheme.onSurface.withOpacity(0.9),
+          color: theme.colorScheme.onSurface.withValues(alpha: 0.9),
           letterSpacing: 0.2,
         ),
       ),
@@ -294,18 +294,18 @@ class _PassengerSignUpScreenState extends State<PassengerSignUpScreen> {
           fontWeight: FontWeight.w400,
         ),
         filled: true,
-        fillColor: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF8FAFC),
+        fillColor: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF8FAFC),
         contentPadding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 16.0),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(
-            color: isDark ? Colors.white.withOpacity(0.1) : const Color(0xFFE2E8F0),
+            color: isDark ? Colors.white.withValues(alpha: 0.1) : const Color(0xFFE2E8F0),
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(
-            color: isDark ? Colors.white.withOpacity(0.1) : const Color(0xFFE2E8F0),
+            color: isDark ? Colors.white.withValues(alpha: 0.1) : const Color(0xFFE2E8F0),
           ),
         ),
         focusedBorder: OutlineInputBorder(

@@ -93,7 +93,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
-                    color: const Color(0xFFD4AF37).withOpacity(0.2),
+                    color: const Color(0xFFD4AF37).withValues(alpha: 0.2),
                     blurRadius: 8,
                     offset: const Offset(0, 2),
                   ),
@@ -199,7 +199,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                           borderRadius: BorderRadius.circular(16),
                           boxShadow: [
                             BoxShadow(
-                              color: const Color(0xFF2B63B6).withOpacity(0.4),
+                              color: const Color(0xFF2B63B6).withValues(alpha: 0.4),
                               blurRadius: 20,
                               offset: const Offset(0, 10),
                             ),
@@ -257,19 +257,19 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                   end: Alignment.bottomRight,
                   colors: [
                     Colors.white,
-                    data.color.withOpacity(0.02),
+                    data.color.withValues(alpha: 0.02),
                   ],
                 ),
                 borderRadius: BorderRadius.circular(32),
                 boxShadow: [
                   BoxShadow(
-                    color: data.color.withOpacity(0.08),
+                    color: data.color.withValues(alpha: 0.08),
                     blurRadius: 30,
                     offset: const Offset(0, 10),
                   ),
                 ],
                 border: Border.all(
-                  color: data.color.withOpacity(0.1),
+                  color: data.color.withValues(alpha: 0.1),
                   width: 1,
                 ),
               ),
@@ -286,8 +286,8 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                         shape: BoxShape.circle,
                         gradient: RadialGradient(
                           colors: [
-                            data.color.withOpacity(0.08),
-                            data.color.withOpacity(0),
+                            data.color.withValues(alpha: 0.08),
+                            data.color.withValues(alpha: 0),
                           ],
                         ),
                       ),
@@ -303,8 +303,8 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                         shape: BoxShape.circle,
                         gradient: RadialGradient(
                           colors: [
-                            data.color.withOpacity(0.05),
-                            data.color.withOpacity(0),
+                            data.color.withValues(alpha: 0.05),
+                            data.color.withValues(alpha: 0),
                           ],
                         ),
                       ),
@@ -340,10 +340,10 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                           child: Image.asset(
                             data.imagePath,
                             fit: BoxFit.contain,
-                            errorBuilder: (_, __, ___) => Icon(
+                            errorBuilder: (_, _, _) => Icon(
                               Icons.image_rounded,
                               size: 120,
-                              color: data.color.withOpacity(0.3),
+                              color: data.color.withValues(alpha: 0.3),
                             ),
                           ),
                         ),
@@ -361,7 +361,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                                   end: Alignment.bottomCenter,
                                   colors: [
                                     data.color,
-                                    data.color.withOpacity(0.3),
+                                    data.color.withValues(alpha: 0.3),
                                   ],
                                 ),
                                 borderRadius: BorderRadius.circular(2),
@@ -420,14 +420,14 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
         borderRadius: BorderRadius.circular(4),
         gradient: isActive
             ? LinearGradient(
-          colors: [data.color, data.color.withOpacity(0.6)],
+          colors: [data.color, data.color.withValues(alpha: 0.6)],
         )
             : null,
         color: isActive ? null : const Color(0xFFE2E8F0),
         boxShadow: isActive
             ? [
           BoxShadow(
-            color: data.color.withOpacity(0.3),
+            color: data.color.withValues(alpha: 0.3),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),

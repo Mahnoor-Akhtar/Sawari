@@ -76,7 +76,7 @@ class PassengerProfileTab extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 12),
                         child: Material(
                           color: isDarkNow
-                              ? Colors.white.withOpacity(0.05)
+                              ? Colors.white.withValues(alpha: 0.05)
                               : Colors.white,
                           borderRadius: BorderRadius.circular(16),
                           child: InkWell(
@@ -92,7 +92,7 @@ class PassengerProfileTab extends StatelessWidget {
                                 padding: const EdgeInsets.all(10),
                                 decoration: BoxDecoration(
                                   color: isDarkNow
-                                      ? Colors.white.withOpacity(0.05)
+                                      ? Colors.white.withValues(alpha: 0.05)
                                       : const Color(0xFFF1F5F9),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
@@ -124,7 +124,7 @@ class PassengerProfileTab extends StatelessWidget {
                               ),
                               trailing: Switch(
                                 value: isDarkNow,
-                                activeColor: theme.colorScheme.primary,
+                                activeThumbColor: theme.colorScheme.primary,
                                 onChanged: (val) {
                                   themeNotifier.value = val
                                       ? ThemeMode.dark
@@ -175,10 +175,10 @@ class PassengerProfileTab extends StatelessWidget {
                       style: OutlinedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         side: BorderSide(
-                            color: Colors.redAccent.withOpacity(0.5),
+                            color: Colors.redAccent.withValues(alpha: 0.5),
                             width: 1.5
                         ),
-                        backgroundColor: Colors.redAccent.withOpacity(0.05),
+                        backgroundColor: Colors.redAccent.withValues(alpha: 0.05),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16),
                         ),
@@ -215,7 +215,7 @@ class PassengerProfileTab extends StatelessWidget {
         gradient: LinearGradient(
           colors: [
             theme.colorScheme.primary,
-            isDark ? theme.colorScheme.primary.withOpacity(0.6) : theme.colorScheme.primaryContainer,
+            isDark ? theme.colorScheme.primary.withValues(alpha: 0.6) : theme.colorScheme.primaryContainer,
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -235,10 +235,10 @@ class PassengerProfileTab extends StatelessWidget {
                 height: 116,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white.withOpacity(0.8), width: 4),
+                  border: Border.all(color: Colors.white.withValues(alpha: 0.8), width: 4),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(isDark ? 0.4 : 0.15),
+                      color: Colors.black.withValues(alpha: isDark ? 0.4 : 0.15),
                       blurRadius: 24,
                       offset: const Offset(0, 8),
                     ),
@@ -260,7 +260,7 @@ class PassengerProfileTab extends StatelessWidget {
                     border: Border.all(color: Colors.white, width: 2),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
+                        color: Colors.black.withValues(alpha: 0.2),
                         blurRadius: 8,
                         offset: const Offset(0, 4),
                       ),
@@ -299,7 +299,7 @@ class PassengerProfileTab extends StatelessWidget {
           Text(
             'haris@example.com',
             style: TextStyle(
-              color: Colors.white.withOpacity(0.85),
+              color: Colors.white.withValues(alpha: 0.85),
               fontSize: 15,
               fontWeight: FontWeight.w500,
             ),
@@ -316,11 +316,11 @@ class PassengerProfileTab extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
       decoration: BoxDecoration(
-        color: isDark ? Colors.white.withOpacity(0.05) : Colors.white,
+        color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.white,
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.3 : 0.04),
+            color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.04),
             blurRadius: 20,
             offset: const Offset(0, 8),
           ),
@@ -371,7 +371,7 @@ class PassengerProfileTab extends StatelessWidget {
     return Container(
       width: 1,
       height: 36,
-      color: isDark ? Colors.white.withOpacity(0.1) : const Color(0xFFE2E8F0),
+      color: isDark ? Colors.white.withValues(alpha: 0.1) : const Color(0xFFE2E8F0),
     );
   }
 
@@ -408,7 +408,7 @@ class PassengerProfileTab extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Material(
-        color: isDark ? Colors.white.withOpacity(0.05) : Colors.white,
+        color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.white,
         borderRadius: BorderRadius.circular(16),
         clipBehavior: Clip.antiAlias, // Ensures the ripple stays inside the rounded corners
         child: InkWell(
@@ -421,7 +421,7 @@ class PassengerProfileTab extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: isDark
-                    ? Colors.white.withOpacity(0.05)
+                    ? Colors.white.withValues(alpha: 0.05)
                     : const Color(0xFFF1F5F9),
                 borderRadius: BorderRadius.circular(12),
               ),

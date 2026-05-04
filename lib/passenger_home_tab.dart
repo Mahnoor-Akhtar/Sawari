@@ -34,7 +34,7 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(isDark ? 0.3 : 0.08),
+                        color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.08),
                         blurRadius: 12,
                         offset: const Offset(0, 4),
                       ),
@@ -66,11 +66,11 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
-              color: theme.scaffoldBackgroundColor.withOpacity(isDark ? 0.95 : 1.0),
+              color: theme.scaffoldBackgroundColor.withValues(alpha: isDark ? 0.95 : 1.0),
               borderRadius: BorderRadius.circular(12),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(isDark ? 0.3 : 0.08),
+                  color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.08),
                   blurRadius: 12,
                   offset: const Offset(0, 4),
                 ),
@@ -129,7 +129,7 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
-                color: theme.colorScheme.primary.withOpacity(0.15),
+                color: theme.colorScheme.primary.withValues(alpha: 0.15),
                 shape: BoxShape.circle,
               ),
               child: Center(
@@ -142,7 +142,7 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
                     border: Border.all(color: Colors.white, width: 3),
                     boxShadow: [
                       BoxShadow(
-                        color: theme.colorScheme.primary.withOpacity(0.4),
+                        color: theme.colorScheme.primary.withValues(alpha: 0.4),
                         blurRadius: 8,
                         offset: const Offset(0, 4),
                       ),
@@ -162,7 +162,7 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(isDark ? 0.3 : 0.08),
+                  color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.08),
                   blurRadius: 12,
                   offset: const Offset(0, 4),
                 ),
@@ -205,7 +205,7 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
             borderRadius: const BorderRadius.vertical(top: Radius.circular(28)),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(isDark ? 0.4 : 0.08),
+                color: Colors.black.withValues(alpha: isDark ? 0.4 : 0.08),
                 blurRadius: 24,
                 offset: const Offset(0, -4),
               ),
@@ -236,10 +236,10 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
                   child: Container(
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: isDark ? theme.colorScheme.primary.withOpacity(0.15) : const Color(0xFFEFF6FF),
+                      color: isDark ? theme.colorScheme.primary.withValues(alpha: 0.15) : const Color(0xFFEFF6FF),
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
-                        color: isDark ? theme.colorScheme.primary.withOpacity(0.3) : const Color(0xFFBFDBFE),
+                        color: isDark ? theme.colorScheme.primary.withValues(alpha: 0.3) : const Color(0xFFBFDBFE),
                       ),
                     ),
                     child: Row(
@@ -247,7 +247,7 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
                         Container(
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFF59E0B).withOpacity(0.2),
+                            color: const Color(0xFFF59E0B).withValues(alpha: 0.2),
                             shape: BoxShape.circle,
                           ),
                           child: const Icon(Icons.toll, color: Color(0xFFD97706), size: 20),
@@ -295,7 +295,7 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     decoration: BoxDecoration(
-                      color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9),
+                      color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
@@ -305,7 +305,7 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
                         Text(
                           'Where to & for how much?',
                           style: TextStyle(
-                            color: theme.colorScheme.onSurface.withOpacity(0.6),
+                            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
                           ),
@@ -457,8 +457,8 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
           height: 60,
           decoration: BoxDecoration(
             color: isSelected
-                ? theme.colorScheme.primary.withOpacity(0.15)
-                : (isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF8FAFC)),
+                ? theme.colorScheme.primary.withValues(alpha: 0.15)
+                : (isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF8FAFC)),
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
                 color: isSelected ? theme.colorScheme.primary : Colors.transparent,
@@ -495,7 +495,7 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9),
+              color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9),
               shape: BoxShape.circle,
             ),
             child: Icon(icon, color: theme.colorScheme.primary, size: 24),
@@ -519,7 +519,7 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
                 style: TextStyle(
                   fontSize: 10,
                   fontWeight: FontWeight.w500,
-                  color: theme.colorScheme.onSurface.withOpacity(0.5),
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                 ),
               ),
             ),
@@ -536,9 +536,9 @@ class _PassengerHomeTabState extends State<PassengerHomeTab> {
       height: height,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF8FAFC),
+        color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF8FAFC),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: isDark ? Colors.white.withOpacity(0.08) : const Color(0xFFE2E8F0)),
+        border: Border.all(color: isDark ? Colors.white.withValues(alpha: 0.08) : const Color(0xFFE2E8F0)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

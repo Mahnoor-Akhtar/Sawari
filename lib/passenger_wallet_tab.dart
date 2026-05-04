@@ -27,7 +27,7 @@ class PassengerWalletTab extends StatelessWidget {
             margin: const EdgeInsets.only(right: 8),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9),
+              color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9),
             ),
             child: IconButton(
               icon: Icon(Icons.notifications_outlined, color: theme.colorScheme.onSurface, size: 22),
@@ -141,15 +141,15 @@ class PassengerWalletTab extends StatelessWidget {
         gradient: LinearGradient(
           colors: isDark
               ? [const Color(0xFF1E293B), const Color(0xFF0F172A)]
-              : [theme.colorScheme.primary, theme.colorScheme.primary.withOpacity(0.8)],
+              : [theme.colorScheme.primary, theme.colorScheme.primary.withValues(alpha: 0.8)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(32),
-        border: isDark ? Border.all(color: Colors.white.withOpacity(0.1)) : null,
+        border: isDark ? Border.all(color: Colors.white.withValues(alpha: 0.1)) : null,
         boxShadow: [
           BoxShadow(
-            color: (isDark ? Colors.black : theme.colorScheme.primary).withOpacity(0.25),
+            color: (isDark ? Colors.black : theme.colorScheme.primary).withValues(alpha: 0.25),
             blurRadius: 32,
             offset: const Offset(0, 16),
           ),
@@ -168,7 +168,7 @@ class PassengerWalletTab extends StatelessWidget {
                 height: 180,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.08),
+                  color: Colors.white.withValues(alpha: 0.08),
                 ),
               ),
             ),
@@ -185,7 +185,7 @@ class PassengerWalletTab extends StatelessWidget {
                         children: [
                           Text(
                             'Current Balance',
-                            style: TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 14, fontWeight: FontWeight.w600),
+                            style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 14, fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(height: 4),
                           const Text(
@@ -197,7 +197,7 @@ class PassengerWalletTab extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.2),
+                          color: Colors.white.withValues(alpha: 0.2),
                           borderRadius: BorderRadius.circular(18),
                         ),
                         child: const Icon(Icons.account_balance_wallet, color: Colors.white, size: 26),
@@ -227,9 +227,9 @@ class PassengerWalletTab extends StatelessWidget {
       children: [
         Row(
           children: [
-            Icon(icon, size: 14, color: Colors.white.withOpacity(0.7)),
+            Icon(icon, size: 14, color: Colors.white.withValues(alpha: 0.7)),
             const SizedBox(width: 6),
-            Text(label, style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 13, fontWeight: FontWeight.w500)),
+            Text(label, style: TextStyle(color: Colors.white.withValues(alpha: 0.7), fontSize: 13, fontWeight: FontWeight.w500)),
           ],
         ),
         const SizedBox(height: 6),
@@ -244,7 +244,7 @@ class PassengerWalletTab extends StatelessWidget {
     return Column(
       children: [
         Material(
-          color: isDark ? color.withOpacity(0.15) : color.withOpacity(0.1),
+          color: isDark ? color.withValues(alpha: 0.15) : color.withValues(alpha: 0.1),
           borderRadius: BorderRadius.circular(20),
           clipBehavior: Clip.antiAlias,
           child: InkWell(
@@ -275,7 +275,7 @@ class PassengerWalletTab extends StatelessWidget {
     final isDark = theme.brightness == Brightness.dark;
 
     return Material(
-      color: isDark ? Colors.white.withOpacity(0.05) : Colors.white,
+      color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.white,
       borderRadius: BorderRadius.circular(24),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
@@ -283,7 +283,7 @@ class PassengerWalletTab extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-            border: Border.all(color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9)),
+            border: Border.all(color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9)),
             borderRadius: BorderRadius.circular(24),
           ),
           child: Row(
@@ -291,7 +291,7 @@ class PassengerWalletTab extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: Colors.orange.withOpacity(0.15),
+                  color: Colors.orange.withValues(alpha: 0.15),
                   shape: BoxShape.circle,
                 ),
                 child: const Icon(Icons.auto_graph_rounded, color: Colors.orange, size: 24),
@@ -328,7 +328,7 @@ class PassengerWalletTab extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Material(
-        color: isDark ? Colors.white.withOpacity(0.05) : Colors.white,
+        color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.white,
         borderRadius: BorderRadius.circular(24),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
@@ -337,7 +337,7 @@ class PassengerWalletTab extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               border: Border.all(
-                color: isSelected ? theme.colorScheme.primary : (isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9)),
+                color: isSelected ? theme.colorScheme.primary : (isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9)),
                 width: isSelected ? 2.0 : 1.5,
               ),
               borderRadius: BorderRadius.circular(24),
@@ -348,7 +348,7 @@ class PassengerWalletTab extends StatelessWidget {
                   width: 56,
                   height: 56,
                   decoration: BoxDecoration(
-                    color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF8FAFC),
+                    color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF8FAFC),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: icon != null
@@ -407,7 +407,7 @@ class PassengerWalletTab extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
-                    color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9),
+                    color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Icon(icon, color: isDark ? Colors.grey[300] : const Color(0xFF475569), size: 24),

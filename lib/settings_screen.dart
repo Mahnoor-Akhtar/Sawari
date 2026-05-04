@@ -42,7 +42,7 @@ class SettingsScreen extends StatelessWidget {
                   'Push Notifications',
                   trailing: Switch(
                       value: true,
-                      activeColor: theme.colorScheme.primary,
+                      activeThumbColor: theme.colorScheme.primary,
                       onChanged: (v) {}
                   ),
                 ),
@@ -111,7 +111,7 @@ class SettingsScreen extends StatelessWidget {
             thickness: 1,
             indent: 64, // Aligns divider with text start
             endIndent: 20,
-            color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9),
+            color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9),
           ),
         );
       }
@@ -136,21 +136,21 @@ class SettingsScreen extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24),
             boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(isDark ? 0.3 : 0.03),
-                blurRadius: 20,
-                offset: const Offset(0, 8),
-              ),
-            ],
-          ),
-          child: Material(
-            color: isDark ? Colors.white.withOpacity(0.05) : Colors.white,
-            borderRadius: BorderRadius.circular(24),
-            clipBehavior: Clip.antiAlias, // Keeps ripples inside the rounded corners
-            child: Column(
-              children: separatedItems,
+            BoxShadow(
+              color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.03),
+              blurRadius: 20,
+              offset: const Offset(0, 8),
             ),
+          ],
+        ),
+        child: Material(
+          color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.white,
+          borderRadius: BorderRadius.circular(24),
+          clipBehavior: Clip.antiAlias, // Keeps ripples inside the rounded corners
+          child: Column(
+            children: separatedItems,
           ),
+        ),
         ),
       ],
     );
@@ -168,8 +168,8 @@ class SettingsScreen extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: textColor != null
-              ? textColor.withOpacity(0.1)
-              : (isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF1F5F9)),
+              ? textColor.withValues(alpha: 0.1)
+              : (isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF1F5F9)),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Icon(icon, color: iconColor, size: 22),

@@ -4,7 +4,6 @@ import 'passenger_orders_tab.dart';
 import 'passenger_wallet_tab.dart';
 import 'passenger_profile_tab.dart';
 import 'driver_sign_up.dart';
-import 'main.dart'; // Import to access themeNotifier
 import 'notifications_screen.dart';
 import 'safety_screen.dart';
 import 'settings_screen.dart';
@@ -55,7 +54,7 @@ class _PassengerDashboardState extends State<PassengerDashboard> {
           color: theme.scaffoldBackgroundColor,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(isDark ? 0.4 : 0.05),
+              color: Colors.black.withValues(alpha: isDark ? 0.4 : 0.05),
               blurRadius: 15,
               offset: const Offset(0, -4),
             ),
@@ -152,7 +151,7 @@ class _PassengerDashboardState extends State<PassengerDashboard> {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: theme.colorScheme.primary.withOpacity(0.2),
+                        color: theme.colorScheme.primary.withValues(alpha: 0.2),
                         width: 2,
                       ),
                     ),
@@ -368,78 +367,6 @@ class _PassengerDashboardState extends State<PassengerDashboard> {
     );
   }
 
-  void _showFeaturePlaceholder(BuildContext context, String title) {
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: Colors.transparent,
-      builder: (context) {
-        final theme = Theme.of(context);
-        final isDark = theme.brightness == Brightness.dark;
-        return Container(
-          decoration: BoxDecoration(
-            color: theme.scaffoldBackgroundColor,
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
-          ),
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: 40,
-                height: 4,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                  borderRadius: BorderRadius.circular(2),
-                ),
-              ),
-              const SizedBox(height: 24),
-              Icon(
-                Icons.construction,
-                size: 64,
-                color: theme.colorScheme.primary,
-              ),
-              const SizedBox(height: 16),
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: theme.colorScheme.onSurface,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'This section is coming soon in the next update!',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: isDark ? Colors.grey[400] : Colors.grey[600],
-                ),
-              ),
-              const SizedBox(height: 32),
-              ElevatedButton(
-                onPressed: () => Navigator.pop(context),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: theme.colorScheme.primary,
-                  minimumSize: const Size(double.infinity, 50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
-                child: const Text(
-                  'Understood',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        );
-      },
-    );
-  }
-
   Widget _buildDrawerItem(
       IconData icon,
       String title, {
@@ -455,7 +382,7 @@ class _PassengerDashboardState extends State<PassengerDashboard> {
           borderRadius: BorderRadius.circular(12),
         ),
         selected: isSelected,
-        selectedTileColor: theme.colorScheme.primary.withOpacity(0.1),
+        selectedTileColor: theme.colorScheme.primary.withValues(alpha: 0.1),
         leading: Icon(
             icon,
             color: isSelected ? theme.colorScheme.primary : theme.colorScheme.onSurfaceVariant,
@@ -477,7 +404,7 @@ class _PassengerDashboardState extends State<PassengerDashboard> {
   Widget _buildSocialIcon(IconData icon) {
     return IconButton(
       icon: Icon(icon),
-      color: Theme.of(context).colorScheme.primary.withOpacity(0.8),
+      color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.8),
       iconSize: 28,
       onPressed: () {
         // Handle social link logic here later

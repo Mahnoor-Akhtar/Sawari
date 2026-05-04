@@ -26,7 +26,7 @@ class RoleSelectionScreen extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(isDark ? 0.5 : 0.1),
+                color: Colors.black.withValues(alpha: isDark ? 0.5 : 0.1),
                 blurRadius: 20,
                 offset: const Offset(0, -5),
               ),
@@ -57,7 +57,7 @@ class RoleSelectionScreen extends StatelessWidget {
 
               // Driver Option
               Material(
-                color: isDark ? Colors.white.withOpacity(0.05) : Colors.transparent,
+                color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.transparent,
                 borderRadius: BorderRadius.circular(16),
                 clipBehavior: Clip.antiAlias,
                 child: InkWell(
@@ -73,7 +73,7 @@ class RoleSelectionScreen extends StatelessWidget {
                     leading: Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF2B5DA6).withOpacity(0.15),
+                        color: const Color(0xFF2B5DA6).withValues(alpha: 0.15),
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(Icons.directions_car, color: Color(0xFF2B5DA6)),
@@ -93,12 +93,12 @@ class RoleSelectionScreen extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
-                child: Divider(color: isDark ? Colors.white.withOpacity(0.1) : Colors.grey[200]),
+                child: Divider(color: isDark ? Colors.white.withValues(alpha: 0.1) : Colors.grey[200]),
               ),
 
               // Passenger Option
               Material(
-                color: isDark ? Colors.white.withOpacity(0.05) : Colors.transparent,
+                color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.transparent,
                 borderRadius: BorderRadius.circular(16),
                 clipBehavior: Clip.antiAlias,
                 child: InkWell(
@@ -114,7 +114,7 @@ class RoleSelectionScreen extends StatelessWidget {
                     leading: Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF357A68).withOpacity(0.15),
+                        color: const Color(0xFF357A68).withValues(alpha: 0.15),
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(Icons.smartphone, color: Color(0xFF357A68)),
@@ -173,15 +173,15 @@ class RoleSelectionScreen extends StatelessWidget {
                         vertical: 40.0,
                       ),
                       decoration: BoxDecoration(
-                        color: isDark ? Colors.black.withOpacity(0.3) : Colors.white.withOpacity(0.75),
+                        color: isDark ? Colors.black.withValues(alpha: 0.3) : Colors.white.withValues(alpha: 0.75),
                         borderRadius: BorderRadius.circular(32),
                         border: Border.all(
-                          color: isDark ? Colors.white.withOpacity(0.1) : Colors.white.withOpacity(0.8),
+                          color: isDark ? Colors.white.withValues(alpha: 0.1) : Colors.white.withValues(alpha: 0.8),
                           width: 1.5,
                         ),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.05),
+                            color: Colors.black.withValues(alpha: 0.05),
                             blurRadius: 24,
                             spreadRadius: 8,
                           ),
@@ -229,7 +229,7 @@ class RoleSelectionScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                               boxShadow: [
                                 BoxShadow(
-                                  color: (isDark ? Colors.black : const Color(0xFF2B5DA6)).withOpacity(0.3),
+                                  color: (isDark ? Colors.black : const Color(0xFF2B5DA6)).withValues(alpha: 0.3),
                                   blurRadius: 16,
                                   offset: const Offset(0, 8),
                                 ),
@@ -264,7 +264,7 @@ class RoleSelectionScreen extends StatelessWidget {
                                         Container(
                                           padding: const EdgeInsets.all(6),
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.2),
+                                            color: Colors.white.withValues(alpha: 0.2),
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(Icons.directions_car, color: Colors.white, size: 18),
@@ -289,7 +289,7 @@ class RoleSelectionScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                               boxShadow: [
                                 BoxShadow(
-                                  color: (isDark ? Colors.black : const Color(0xFF357A68)).withOpacity(0.3),
+                                  color: (isDark ? Colors.black : const Color(0xFF357A68)).withValues(alpha: 0.3),
                                   blurRadius: 16,
                                   offset: const Offset(0, 8),
                                 ),
@@ -324,7 +324,7 @@ class RoleSelectionScreen extends StatelessWidget {
                                         Container(
                                           padding: const EdgeInsets.all(6),
                                           decoration: BoxDecoration(
-                                            color: Colors.white.withOpacity(0.2),
+                                            color: Colors.white.withValues(alpha: 0.2),
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(Icons.smartphone, color: Colors.white, size: 18),

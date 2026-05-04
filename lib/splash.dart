@@ -129,7 +129,7 @@ class _SplashScreenState extends State<SplashScreen>
                         width: 120,
                         height: 120,
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.1),
+                          color: Colors.white.withValues(alpha: 0.1),
                           shape: BoxShape.circle,
                         ),
                         child: const Icon(
@@ -196,7 +196,7 @@ class WavesPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.white.withOpacity(0.15)
+      ..color = Colors.white.withValues(alpha: 0.15)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.2
       ..isAntiAlias = true; // Ensures smooth, non-pixelated curves
@@ -287,7 +287,7 @@ class _BottomKnobState extends State<BottomKnob> with SingleTickerProviderStateM
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.3),
+                          color: Colors.black.withValues(alpha: 0.3),
                           blurRadius: 24,
                           offset: const Offset(0, 12),
                         ),
@@ -310,7 +310,7 @@ class _BottomKnobState extends State<BottomKnob> with SingleTickerProviderStateM
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.2),
+                              color: Colors.black.withValues(alpha: 0.2),
                               blurRadius: 4,
                               offset: const Offset(0, 2),
                             )
@@ -368,12 +368,12 @@ class _BottomKnobState extends State<BottomKnob> with SingleTickerProviderStateM
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.4),
+                  color: Colors.black.withValues(alpha: 0.4),
                   blurRadius: 2,
                   offset: const Offset(1, 1),
                 ),
                 BoxShadow(
-                  color: Colors.white.withOpacity(0.8),
+                  color: Colors.white.withValues(alpha: 0.8),
                   blurRadius: 2,
                   offset: const Offset(-1, -1),
                 ),
@@ -390,7 +390,7 @@ class MarblePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = const Color(0xFFD4AF37).withOpacity(0.6)
+      ..color = const Color(0xFFD4AF37).withValues(alpha: 0.6)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.0
       ..isAntiAlias = true;

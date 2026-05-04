@@ -64,7 +64,7 @@ class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
                   child: Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: isDark ? Colors.white.withOpacity(0.05) : theme.colorScheme.primary.withOpacity(0.05),
+                      color: isDark ? Colors.white.withValues(alpha: 0.05) : theme.colorScheme.primary.withValues(alpha: 0.05),
                       shape: BoxShape.circle,
                     ),
                     child: Image.asset(
@@ -301,14 +301,14 @@ class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
 
     return Container(
       decoration: BoxDecoration(
-        color: isDark ? Colors.white.withOpacity(0.05) : Colors.white,
+        color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.white,
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
-          color: isDark ? Colors.white.withOpacity(0.05) : Colors.transparent,
+          color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.transparent,
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.3 : 0.04),
+            color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.04),
             blurRadius: 20,
             offset: const Offset(0, 8),
           ),
@@ -324,7 +324,7 @@ class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
                 Container(
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: theme.colorScheme.primary.withOpacity(0.1),
+                    color: theme.colorScheme.primary.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(
@@ -380,7 +380,7 @@ class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w700,
-            color: theme.colorScheme.onSurface.withOpacity(0.9),
+            color: theme.colorScheme.onSurface.withValues(alpha: 0.9),
             letterSpacing: 0.2,
           ),
         ),
@@ -422,18 +422,18 @@ class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
               fontWeight: FontWeight.w400,
             ),
             filled: true,
-            fillColor: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFF8FAFC),
+            fillColor: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFF8FAFC),
             contentPadding: const EdgeInsets.symmetric(
               vertical: 16.0,
               horizontal: 16.0,
             ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(14),
-              borderSide: BorderSide(color: isDark ? Colors.white.withOpacity(0.1) : const Color(0xFFE2E8F0)),
+              borderSide: BorderSide(color: isDark ? Colors.white.withValues(alpha: 0.1) : const Color(0xFFE2E8F0)),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(14),
-              borderSide: BorderSide(color: isDark ? Colors.white.withOpacity(0.1) : const Color(0xFFE2E8F0)),
+              borderSide: BorderSide(color: isDark ? Colors.white.withValues(alpha: 0.1) : const Color(0xFFE2E8F0)),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(14),

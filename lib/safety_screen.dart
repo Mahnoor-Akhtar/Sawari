@@ -38,7 +38,7 @@ class SafetyScreen extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: isDark ? Colors.white.withOpacity(0.05) : theme.colorScheme.primary.withOpacity(0.1),
+                  color: isDark ? Colors.white.withValues(alpha: 0.05) : theme.colorScheme.primary.withValues(alpha: 0.1),
                   shape: BoxShape.circle,
                 ),
                 child: Icon(
@@ -128,14 +128,14 @@ class SafetyScreen extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(isDark ? 0.3 : 0.04),
+              color: Colors.black.withValues(alpha: isDark ? 0.3 : 0.04),
               blurRadius: 20,
               offset: const Offset(0, 8),
             ),
           ],
         ),
         child: Material(
-          color: isDark ? Colors.white.withOpacity(0.05) : Colors.white,
+          color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.white,
           borderRadius: BorderRadius.circular(24),
           clipBehavior: Clip.antiAlias,
           child: InkWell(
@@ -146,7 +146,7 @@ class SafetyScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: isDark ? Colors.white.withOpacity(0.05) : Colors.transparent,
+                  color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.transparent,
                 ),
                 borderRadius: BorderRadius.circular(24),
               ),
@@ -155,7 +155,7 @@ class SafetyScreen extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: isDark ? iconColor.withOpacity(0.15) : iconColor.withOpacity(0.1),
+                      color: isDark ? iconColor.withValues(alpha: 0.15) : iconColor.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Icon(icon, color: iconColor, size: 26),
